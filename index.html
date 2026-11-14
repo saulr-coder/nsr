@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>For Nasira</title>
+    <meta name="theme-color" content="#0a0620" />
+    <meta name="description" content="A little universe, made just for you." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="bg"></canvas>
+    <canvas id="fx"></canvas>
+
+    <button
+      id="sound"
+      class="icon-btn"
+      aria-label="Toggle sound"
+      title="Sound on/off"
+    >
+      On
+    </button>
+
+    <!-- Scene 1 -->
+    <section class="scene active" id="intro">
+      <div class="wrap center">
+        <p class="eyebrow">a little universe, made just for you</p>
+        <h1 class="title">
+          For <span class="script" id="nameTitle">Nasira</span>
+        </h1>
+        <p class="sub">
+          Put your headphones on<br />and let me show you something.
+        </p>
+        <button class="btn" id="beginBtn">Begin ✦</button>
+      </div>
+    </section>
+
+    <!-- Scene 2 -->
+    <section class="scene" id="stars">
+      <div class="wrap center">
+        <h2 class="h2">Our Constellation</h2>
+        <p class="sub small">Tap every star to discover why I love you.</p>
+        <div class="stage" id="stage">
+          <svg
+            id="lines"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          ></svg>
+          <div class="heart-name script" id="heartName">Nasira</div>
+        </div>
+        <div class="reason" id="reason" aria-live="polite">
+          <span class="hint">✦</span>
+        </div>
+        <p class="progress" id="progress">0 / 12 stars found</p>
+        <button class="btn hidden" id="toLetter">Continue ♥</button>
+      </div>
+    </section>
+
+    <!-- Scene 3 -->
+    <section class="scene" id="letter">
+      <div class="wrap">
+        <div class="paper">
+          <div id="letterText"></div>
+          <div class="together hidden" id="together">
+            <p class="together-label">We have been writing our story for</p>
+            <div class="counter" id="counter"></div>
+          </div>
+        </div>
+        <div class="center">
+          <button class="btn ghost" id="skipType">Skip typing</button>
+          <button class="btn hidden" id="toAsk">One last thing… ✦</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scene 4 -->
+    <section class="scene" id="ask">
+      <div class="wrap center">
+        <div id="question">
+          <h2 class="big">Nasira,<br />will you be my forever?</h2>
+          <div class="choices" id="choices">
+            <button class="btn yes" id="yesBtn">Yes ♥</button>
+            <button class="btn ghost no" id="noBtn">No</button>
+          </div>
+        </div>
+        <div id="final" class="hidden">
+          <p class="final-text">
+            Forever starts right now.<br />I love you more than all the stars up
+            there.
+          </p>
+          <p class="sig script" id="finalSig">Yours, always</p>
+          <button class="btn ghost" id="replay">Replay ↺</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
