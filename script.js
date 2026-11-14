@@ -35,7 +35,7 @@ let W = innerWidth,
   H = innerHeight;
 const mouse = { x: W / 2, y: H / 2, active: false };
 
-document.title = `For ${CONFIG.name} ♥`;
+document.title = `For ${CONFIG.name}`;
 $("#nameTitle").textContent = CONFIG.name;
 $("#heartName").textContent = CONFIG.name;
 $("#finalSig").textContent = `Yours always my love`;
